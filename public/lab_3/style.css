@@ -7,20 +7,20 @@ html, body {
 
 html {
   font-size: 10px;
-
+  background-color: #0C6FB4;
 }
 
 body {
   width: 70%;
   min-width: 800px;
   margin: 0 auto;
-  background-color: #6091C3;
+  background-color: #6083c3;
 }
 
 /* || typography */
 
 h1, h2, h3 {
-  font-family: 'Cinzel Decorative', cursive;
+  font-family: 'Playball', serif;
   color: #2a2a2a;
 }
 
@@ -37,7 +37,7 @@ h1 {
 }
 
 h2 {
-  font-size: 5rem;
+  font-size: 3rem;
   text-align: center;
   font-weight: 800;
 }
@@ -99,6 +99,15 @@ nav li {
   flex: 1;
 }
 
+.flex-container{
+  padding: 0;
+  width: 30px;
+  height: 10px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
 nav a, nav span {
   display: inline-block;
   font-size: 2rem;
@@ -121,19 +130,18 @@ nav a, nav span {
 }
 
 .aside {
-  display: flex;
-  flex-flow: row wrap;
-  flex: 2;
+  flex: 1;
+  margin-left: 10px; 
+  padding: 1%;
 }
 
 .aside a {
-  display: flex;
+  display: block;
   flex-basis: 50%;
 }
 
 .aside img {
-  width: 100%;
-  height: auto;
+  max-width: 100%;
 }
 
 .footer {
