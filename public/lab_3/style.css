@@ -55,7 +55,7 @@ p, li {
 
 /* || header layout */
 
-.header {
+header {
   margin-bottom: 10px;
   display: flex;
   flex-flow: row wrap;
@@ -123,29 +123,29 @@ nav a, nav span {
 
 /* || main layout */
 
-.main {
+main {
   display: flex;
 }
 
-.article, .section {
+article, .section {
   flex: 4;
 }
 
-.aside {
+aside {
   flex: 1;
   margin-left: 10px; 
   padding: 1%;
 }
 
-.aside a {
+aside a {
   display: block;
   width: 30%;
 }
 
-.aside img {
+aside img {
   max-width: 100%;
 }
 
-.footer {
+footer {
   margin-top: 10px;
 }
