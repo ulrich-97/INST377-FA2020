@@ -7,7 +7,7 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: #0C6FB4;
+  background-color: #0c17af;
 }
 
 body {
@@ -60,7 +60,7 @@ p, li {
 }
 
 body > * {
-  background-color: red;
+  background-color: #0caf14;
   padding: 1%;
 }
 
@@ -137,7 +137,7 @@ nav a, nav span {
 
 .aside a {
   display: block;
-  flex-basis: 50%;
+  flex-basis: 30%;
 }
 
 .aside img {
