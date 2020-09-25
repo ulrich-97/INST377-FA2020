@@ -57,7 +57,7 @@ html, body {
   ul {
     list-style: none;
     padding: 0;
-    margin: 40px;
+    margin: 0;
   }
   
   form li + li {
@@ -76,10 +76,9 @@ textarea {
   /* To make sure that all text fields have the same font settings
      By default, textareas have a monospace font */
   font: 1em sans-serif;
-  padding: 50px;
 
   /* Uniform text field size */
-  width: 700px;
+  width: 300px;
   box-sizing: border-box;
 
   /* Match form field borders */
