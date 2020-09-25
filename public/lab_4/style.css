@@ -6,12 +6,12 @@ html, body {
   }
   
   html {
-    font-size: 10px;
+    font-size: 30px;
   
   }
   
   body {
-    width: 70%;
+    width: 80%;
     min-width: 800px;
     margin: 0 auto;
     background-color: #6091C3;
@@ -47,11 +47,11 @@ html, body {
   form {
     /* Center the form on the page */
     margin: 0 auto;
-    width: 400px;
+    width: 700px;
     /* Form outline */
     padding: 1em;
-    border: 1px solid #CCC;
-    border-radius: 1em;
+   /* border: 1px solid #CCC;*/
+   /* border-radius: 1em;*/
   }
 
   ul {
@@ -67,7 +67,7 @@ html, body {
   label {
     /* Uniform size & alignment */
     display: inline-block;
-    width: 140px;
+    width: 220px;
     text-align: right;
   }
 
@@ -78,7 +78,7 @@ textarea {
   font: 1em sans-serif;
 
   /* Uniform text field size */
-  width: 700px;
+  width: 500px;
   box-sizing: border-box;
 
   /* Match form field borders */
@@ -93,15 +93,16 @@ textarea:focus {
 
 textarea {
   /* Align multiline text fields with their labels */
-  vertical-align: top;
+  vertical-align: baseline;
 
   /* Provide space to type some text */
-  height: 15em;
+  height: 20em;
 }
 
 .button {
   /* Align buttons with the text fields */
   padding-left: 90px; /* same size as the label elements */
+  vertical-align: auto;
 }
 
 button {
@@ -112,6 +113,8 @@ button {
 
 .flex-outer {
   page-break-after: auto;
+  vertical-align: baseline;
+  margin-left: auto;
 }
 
   
