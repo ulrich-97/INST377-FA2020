@@ -82,7 +82,7 @@ textarea {
   box-sizing: border-box;
 
   /* Match form field borders */
-  border: 1px solid #999;
+/*  border: 1px solid #999; */
 }
 
 input:focus, 
@@ -96,7 +96,7 @@ textarea {
   vertical-align: top;
 
   /* Provide space to type some text */
-  height: 5em;
+  height: 15em;
 }
 
 .button {
