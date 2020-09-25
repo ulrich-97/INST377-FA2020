@@ -6,12 +6,12 @@ html, body {
   }
   
   html {
-    font-size: 30px;
+    font-size: 10px;
   
   }
   
   body {
-    width: 80%;
+    width: 70%;
     min-width: 800px;
     margin: 0 auto;
     background-color: #6091C3;
@@ -47,7 +47,7 @@ html, body {
   form {
     /* Center the form on the page */
     margin: 0 auto;
-    width: 700px;
+    width: 400px;
     /* Form outline */
     padding: 1em;
    /* border: 1px solid #CCC;*/
@@ -67,7 +67,7 @@ html, body {
   label {
     /* Uniform size & alignment */
     display: inline-block;
-    width: 220px;
+    width: 1400px;
     text-align: right;
   }
 
@@ -78,7 +78,7 @@ textarea {
   font: 1em sans-serif;
 
   /* Uniform text field size */
-  width: 500px;
+  width: 700px;
   box-sizing: border-box;
 
   /* Match form field borders */
