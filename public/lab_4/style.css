@@ -67,7 +67,7 @@ html, body {
   label {
     /* Uniform size & alignment */
     display: inline-block;
-    width: 400px;
+    width: 90px;
     text-align: right;
   }
 
