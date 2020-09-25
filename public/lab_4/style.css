@@ -67,7 +67,7 @@ html, body {
   label {
     /* Uniform size & alignment */
     display: inline-block;
-    width: 90px;
+    width: 140px;
     text-align: right;
   }
 
@@ -78,7 +78,7 @@ textarea {
   font: 1em sans-serif;
 
   /* Uniform text field size */
-  width: 300px;
+  width: 700px;
   box-sizing: border-box;
 
   /* Match form field borders */
