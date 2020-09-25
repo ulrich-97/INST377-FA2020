@@ -82,7 +82,7 @@ textarea {
   box-sizing: border-box;
 
   /* Match form field borders */
-/*  border: 1px solid #999; */
+  border: 1px solid #999; 
 }
 
 input:focus, 
@@ -96,13 +96,12 @@ textarea {
   vertical-align: top;
 
   /* Provide space to type some text */
-  height: 10em;
+  height: 5em;
 }
 
 .button {
   /* Align buttons with the text fields */
-  padding-left: 1px; /* same size as the label elements */
-  vertical-align: auto;
+  padding-left: 90px; /* same size as the label elements */
 }
 
 button {
@@ -111,11 +110,11 @@ button {
   margin-left: .5em;
 }
 
-.flex-outer {
+/*.flex-outer {
   page-break-after: auto;
   vertical-align: baseline;
   margin-left: auto;
-}
+}*/
 
   
   /* || main layout */
