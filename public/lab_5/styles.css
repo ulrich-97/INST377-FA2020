@@ -3,36 +3,71 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  max-width: 800px; 
 }
 
 .flex-outer > li > label,
 .flex-outer li p {
-  flex: 1 0 120px;
-  max-width: 220px;
+  flex: 1 0 125px;
+  max-width: 225px;
 }
  
 .flex-outer > li > label + *,
 .flex-inner {
-  flex: 1 0 220px;
+  flex: 1 0 225px;
 }
 
+h1 {
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 10px black;
+    font-weight: 50px;
+} 
+
 .flex-outer li button {
-    margin-left: auto;
-    padding: 8px 16px;
-    border: none;
+    margin-left: 0px;
+    padding: 6px 12px;
+    border: 1px solid;
     background: #333;
     color: #f2f2f2;
     text-transform: uppercase;
-    letter-spacing: .09em;
-    border-radius: 2px;
+    letter-spacing: 1.2px;
+    border-radius: 3px;
+}
+
+.flex-outer li p {
+    padding: 8px;
+}
+
+.flex-outer > li > label {
+    padding: 8px;
+}
+
+button {
+    margin-right: 10px;
+}
+
+.flex-outer li {
+    max-width: 800px;
 }
 
 .flex-inner li {
     width: 100px;
 }
 
+.flex-outer {
+    margin-right: 5px;
+    margin-left: 5px;
+    max-width: 800px;
+    padding: 0px 16px;
+}
+
 .flex-inner {
     justify-content: space-between;
+}
+
+.flex-inner label {
+    flex: 50px;
 }
 
 body {
@@ -40,6 +75,7 @@ body {
     background: #3AAFAB;
     color: #fff;
     padding: 50px 0;
+    text-align: center;
 }
 
 .flex-outer li input:not([type='checkbox']),
@@ -47,3 +83,8 @@ body {
   padding: 15px;
   border: none;
 }
+
+.checkbox-list-label {
+    width: 100px;
+}
+
