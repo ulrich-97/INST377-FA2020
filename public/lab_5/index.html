@@ -8,39 +8,53 @@
     </head>
 
     <body>
-        <form action="hello-world" method="post">
+        <form action="/api" method="post">
             <div clas="header">
                 <h1>Lab 5 for Ulrich Boudie</h1>
             </div>
 
-            <div class="ul-list">
-                <ul class="Contact">
+            <ul class="flex-outer">
+                <li>
+                  <label for="first-name">First Name</label>
+                  <input type="text" id="first-name" placeholder="">
+                </li>
+                <li>
+                  <label for="last-name">Last Name</label>
+                  <input type="text" id="last-name" placeholder="">
+                </li>
+                <li>
+                  <label for="email">Email</label>
+                  <input type="email" id="email" placeholder="">
+                </li>
+                <li>
+                  <label for="phone">Phone</label>
+                  <input type="tel" id="phone" placeholder="">
+                </li>
+                <li>
+                  <label for="message">Message</label>
+                  <textarea rows="6" id="Text field" placeholder="This is some default message text."></textarea>
+                </li>
+                <li>
+                  <p>Fruits</p>
+                  <ul class="flex-inner">
                     <li>
-                        <label for="First Name">First Name</label>
-                        <input type="text" id="firts name" name="">
-                    </li>
-                    <li>
-                        <label for="Last Name">Last Name</label>
-                        <input type="text" id="last name" name="">
-                    </li>
-                    <li>
-                        <label for="mail">Email</label>
-                        <input type="email" id="mail" name="">
-                    </li>
-                    <li>
-                        <label for="Phone">Phone</label>
-                        <input type="phone" id="phone" name="">
-                    </li>
-                    <li>
-                        <label for="msg">Text field</label>
-                        <textarea>This is some default text</textarea>
-                    </li>
-                </ul>
-            </div>
-
-            <div>
-
-            </div>
+                        <input type="checkbox" id="kiwi">
+                        <label for="kiwy">kiwi</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="dragonfruit">
+                        <label for="dragonfruit">dragonfruit</label>
+                      </li>
+                      <li>
+                        <input type="checkbox" id="pomelo">
+                        <label for="pomelo">pomelo</label>
+                      </li>
+                  </ul>
+                </li>
+                <li>
+                  <button type="submit">Submit</button>
+                </li>
+              </ul>
         </form>
     </body>
 </html>
