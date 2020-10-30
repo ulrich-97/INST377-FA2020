@@ -1,19 +1,32 @@
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
-  return list;
+  fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data);
+      const clearEmptyData = data.filter((f) => f.geocoded_column_1);
+      const list = clearEmptyData.map((m) => ({
+        category: m.category,
+        name: m.name,
+        latlong: m.geocoded_column_1.coordinates,
+      }));
+      return list;
+    })
 }
 
-function makeYourOptionsObject(datapointsFromRestaurantsList) {
+window.onload = function makeYourOptionsObject(datapointsFromRestaurantsList) {
   // set your chart configuration here!
+  var chart = new CanvasJS.Chart("chartContainer")
   CanvasJS.addColorSet('customColorSet1', [
     // add an array of colors here https://canvasjs.com/docs/charts/chart-options/colorset/
+    "rgba(1,77,101,.2)", 
   ]);
 
   return {
     animationEnabled: true,
     colorSet: 'customColorSet1',
     title: {
-      text: 'Change This Title'
+      text: 'Places To Eat Out In Future'
     },
     axisX: {
       interval: 1,
@@ -22,7 +35,7 @@ function makeYourOptionsObject(datapointsFromRestaurantsList) {
     axisY2: {
       interlacedColor: 'rgba(1,77,101,.2)',
       gridColor: 'rgba(1,77,101,.1)',
-      title: 'Change This Title',
+      title: 'Restaurants By Category',
       labelFontSize: 12,
       scaleBreaks: {customBreaks: []} // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
     },
