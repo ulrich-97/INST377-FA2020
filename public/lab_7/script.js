@@ -1,3 +1,4 @@
+
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
   fetch("https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json")
@@ -12,14 +13,40 @@ function convertRestaurantsToCategories(restaurantList) {
       }));
       return list;
     })
+    .then((data) => {
+      return data.reduce((result,  current) => {
+        if (!result[current.category]) {
+          result[current.category] = [];
+        }
+        result[current.category].push(current);
+        return result;
+      }, {});
+    })
+    .then((data) => {
+      console.log("new data", data );
+      const reformattedData = Object.entries(data).map((current, i) => {
+        console.log(current);
+        return {
+          y: current[1].length,
+          label: current[0],
+        };
+      });
+      return reformattedData;
+    })
+    .then((result) => {
+      console.log(result);  
+    
+    const list = JSON.parse(sessionStorage.getItem('restaurantList'));
+    const convertedList = win.convertRestaurantsToCategories(list);
+    })
 }
 
 window.onload = function makeYourOptionsObject(datapointsFromRestaurantsList) {
   // set your chart configuration here!
-  var chart = new CanvasJS.Chart("chartContainer")
+  chart = new CanvasJS.Chart("chartContainer");
   CanvasJS.addColorSet('customColorSet1', [
     // add an array of colors here https://canvasjs.com/docs/charts/chart-options/colorset/
-    "rgba(1,77,101,.2)", 
+    "rgba(1,77,101,.2)",
   ]);
 
   return {
@@ -37,14 +64,30 @@ window.onload = function makeYourOptionsObject(datapointsFromRestaurantsList) {
       gridColor: 'rgba(1,77,101,.1)',
       title: 'Restaurants By Category',
       labelFontSize: 12,
-      scaleBreaks: {customBreaks: []} // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
+      scaleBreaks: { 
+        customBreaks: [
+          {
+            startValue: 40,
+            endValue: 50,
+            color: 10,
+          },
+          {
+            startValue: 85,
+            endValue: 100,
+          },
+          {
+            startValue: 140,
+            endValue: 175,
+          },
+        ],
+      }, // Add your scale breaks here https://canvasjs.com/docs/charts/chart-options/axisy/scale-breaks/custom-breaks/
     },
     data: [{
       type: 'bar',
       name: 'restaurants',
       axisYType: 'secondary',
-      dataPoints: datapointsFromRestaurantsList
-    }]
+      dataPoints: 'win.convertRestaurantsToCategories(list)',
+    }],
   };
 }
 
